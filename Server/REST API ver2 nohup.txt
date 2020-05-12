@@ -1,0 +1,29 @@
+최종 버전
+
+/register 
+para : name, email, pass
+return : {success : true/false, uid : (string), name : (string)}
+
+/login
+para : name, pass
+return : success : true/false, uid : (string), name : (string)
+
+/search 
+para : name
+return : beers : {[{bid, name, imagePath, ibu, srm, abv}x(영문명에 'name' 이 들어간 맥주 최대 10개 들어있는 리스트)]}
+
+/validation  
+para : name, bid, rating
+return : success : true/false
+
+/userRecommandation 
+para : name
+return : beers : {[{bid, name, imagePath, ibu, srm, abv}x8]}
+
+/beerRecommandation 
+para : bid
+return : beers : {[{bid, name, imagePath, ibu, srm, abv}x8]}
+
+(Get) /advertisement 
+para : void
+return : beers : {[{bid, name, imagePath, ibu, srm, abv}x8 (Random)]}
